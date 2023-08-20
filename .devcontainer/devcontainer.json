@@ -43,7 +43,8 @@
 	"features": {
 		// Optional features for development - increase container boot time!
 		// "ghcr.io/devcontainers-contrib/features/coverage-py:2": {},
-		// "git": "latest",
-		// "github-cli": "latest"
-	}
-}
+		"git": "latest",
+		"github-cli": "latest",
+		"ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+	
+}}
