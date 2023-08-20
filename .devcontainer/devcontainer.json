@@ -16,21 +16,21 @@
 			]
 		}
 	},
-  "secrets": {
-    "TOGETHER_API_KEY": {
-      "description": "API key for together.ai"
-    }
-  },	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"secrets": {
+		"TOGETHER_API_KEY": {
+			"description": "API key for together.ai"
+		}
+	}, // Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		8501
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// Install app dependencies.
-	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "pipenv install",
 	// Use 'postAttachCommand' to run commands after a tool has attached to the container.
 	// Start the app.
 	"postAttachCommand": {
-		"server": "streamlit hello --server.enableCORS false --server.enableXsrfProtection false"
+		"server": "pipenv shell"
 	},
 	"portsAttributes": {
 		"8501": {
@@ -46,5 +46,5 @@
 		"git": "latest",
 		"github-cli": "latest",
 		"ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
-	
-}}
+	}
+}
