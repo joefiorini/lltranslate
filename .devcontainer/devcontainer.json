@@ -1,0 +1,10 @@
+ {
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  },
+  "secrets": {
+    "TOGETHER_API_KEY": {
+      "description": "API key for together.ai"
+    }
+  }
+}
